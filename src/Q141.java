@@ -1,4 +1,5 @@
 public class Q141 {
+
     static class ListNode {
          int val;
          ListNode next;
