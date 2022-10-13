@@ -18,4 +18,18 @@ public class Q724 {
         }
         return -1;
     }
+
+
+    // Definitely a better version.
+    public int pivotIndex2(int[] nums) {
+        int total = 0, sum = 0;
+        for(int num : nums) total += num;
+        for(int i = 0; i < nums.length; sum += nums[i++]){
+            // be really careful about using multiply with integer
+            if(sum * 2 == (total - nums[i])){
+                return i;
+            }
+        }
+        return -1;
+    }
 }
