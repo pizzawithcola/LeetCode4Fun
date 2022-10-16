@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.HashMap;
 
 public class Q142 {
@@ -32,7 +33,10 @@ public class Q142 {
             slow = slow.next;
             if(fast == slow) break;
         }
+
+        // when testcase is [1], it will be wrong without the null detection below
         if(fast == null || fast.next == null) return null;
+
         while(slow != head){
             head = head.next;
             slow = slow.next;
